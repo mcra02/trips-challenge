@@ -7,6 +7,11 @@
 
 Reto trips.
 
+## Variables
+
+En un archivo .env agregar las siguientes variables guiandose de .env.example (Nota: Importante tener una API_KEY de google geolocation)
+
+
 ## Contruccion
 
 ```bash
