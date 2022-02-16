@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: '${ENVIRON}'
+    env_file: .env
+    ports:
+      - '${PORT_SERVER}:${PORT}'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: mongo
+    ports:
+      - 27017:27017
+    env_file:
+      - .env
+    volumes:
+      - .volumes/mongo:/data/db
+
+
