@@ -27,7 +27,7 @@ $ make logs
 
 ```bash
 # unit tests
-$ make target="server" test
+$ make test.jest
 ```
 
 ## License
