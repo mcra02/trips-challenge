@@ -27,7 +27,7 @@ export class TripsService {
     this.geocoder =  NodeGeocoder({
       provider: 'google',
 
-      apiKey: 'AIzaSyA6Ef15S7HFkzJNMZHXa-RCkJ0V1lJ03o0',
+      apiKey: process.env.API_KEY_GOOGLE_GEOLOCATION,
       formatter: null
     });
   }
